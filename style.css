@@ -2,6 +2,52 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffdbe6;
     color: #333;
+}
+nav {
+    background-color:white;
+    padding: 10px;
+    position: sticky; /* Sticks the navbar to the top when scrolling */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the nav bar stays above other content */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Makes the list items align in a row */
+    justify-content: left; /* Centers the nav items horizontally */
+}
+
+nav ul li {
+    margin: 0 10px; /* Adds space between the nav items */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffb6c1;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.profilePhoto {
+    border-radius: 50%;
+    width: 150px; /* Adjust size  */
+    height: 150px; /* Adjust size  */
+    margin-right: 1rem;
+  
+}
+.profileInfo {
+    max-width: 600px;
 }

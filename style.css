@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffdbe6;
-    color: #333;
+    color:#a42153;
     width: 100vw;
     height:100vh;
 }
 nav {
-    background-color:white;
+    background-color:#a94064;
     padding: 10px;
     position: sticky; /* Sticks the navbar to the top when scrolling */
     top: 0;
@@ -23,18 +23,17 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; /* Adds space between the nav items */
+    margin: 0 30px; /* Adds space between the nav items */
 }
 
 nav ul li a {
-    color: black;
+    color: palevioletred;
     text-decoration: none;
     font-size: 18px;
-    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffb6c1;
+    color:lightpink;
 }
 
 .profile {
@@ -55,12 +54,17 @@ nav ul li a:hover {
 }
 
 .profileInfo h1 {
-    font-size: 48px;
+    font-family: snell roundhand, cursive;
+    font-size: 100px;
     margin: 0;
 }
 
+.profileInfo h1:hover {
+    color:#f88379;
+}
+
 .profileInfo h2 {
-    font-size: 24px;
+    font-size: 40px;
     margin: 0 0 10px;
 }
 
@@ -75,4 +79,9 @@ nav ul li a:hover {
     height: auto;
     margin-left: 20px;
     border-radius: 10px; /* Optional: Adds a rounded border to the image */
+}
+
+.hobbies.html {
+    
+    background-color: #ffdbe6;
 }

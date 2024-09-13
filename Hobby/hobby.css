@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   background-image: url('hobbyBG.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba (240, 240, 240, 0.2);
+    background-blend-mode: lighten;
+    color:#a42153;
+    width: 100vw;
+    height:100vh;
+}
+nav {
+    background-color:#a94064;
+    padding: 10px;
+    position: sticky; /* Sticks the navbar to the top when scrolling */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the nav bar stays above other content */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Makes the list items align in a row */
+    justify-content: left; /* Centers the nav items horizontally */
+}
+
+nav ul li {
+    margin: 0 30px; /* Adds space between the nav items */
+}
+
+nav ul li a {
+    color: palevioletred;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color:lightpink;
+}
+
+h1 {
+    font-family:snell roundhand, cursive;
+    font-size: 50px;
+    color:aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}

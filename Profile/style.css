@@ -12,6 +12,7 @@ body {
     color: #a42153;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Navbar Styles */
@@ -22,6 +23,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
+    cursor: pointer;
 }
 
 nav ul {
@@ -46,6 +48,7 @@ nav ul li a:hover {
 
 /* Profile Section */
 .profile {
+    margin-top: -20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -62,17 +65,36 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
+.profileInfo h2 {
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow:2px 2px 5px #ffffff;
+
+}
+
 .profileInfo h1 {
-    font-family: 'Snell Roundhand', cursive;
+    font-family: 'Snell Roundhand','cursive';
     font-size: 100px;
     margin: 0;
     color: #f88379;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease;
+    animation: textAnimation 5s ease-in-out infinite;
+}
+@keyframes textAnimation {
+    0% {
+        color: #f88379;
+    }
+    50% {
+        color: #ffffff; /* Hot pink */
+    }
+    100% {
+        color: #f68559;
+    }
 }
 
-.profileInfo h2 {
-    font-size: 40px;
-    margin: 0 0 10px;
+.profileInfo h1:hover {
+    transform: scale(1.1);
 }
 
 .profilePhoto {
@@ -80,7 +102,11 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     margin-left: 10px;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profilePhoto:hover {
+    transform: scale(1.05);
 }
 
 /* Button Styling */
@@ -101,10 +127,75 @@ button:hover {
     transform: scale(1.05);
 }
 
+
+/* About Me Page */
+#Me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%;
+    max-width: 100%;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+#Me h2 {
+    font-size: 27px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 5px peachpuff;
+}
+
+.JustImage {
+    max-width: 35%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Gallery Section*/
+
+#Gallery {
+    padding: 30px;
+    text-align: center;
+}
+
+#Gallery h2 {
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Snell Roundhand','cursive';
+    text-shadow: 2px 2px 5px grey;
+    text-align: left;
+    animation: textAnimation 3s ease-in-out infinite;
+}
+
+.listPhotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.listPhotos img {
+    width: 300px;
+    height: 200px;
+    max-width: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.listPhotos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background-color: #a94064;
     color: white;
     position: fixed;
@@ -119,4 +210,15 @@ footer a {
 
 footer a:hover {
     color: #f88379;
+}
+@keyframes textAnimation {
+    0% {
+        color: #f88379;
+    }
+    50% {
+        color: #ffffff; /* Hot pink */
+    }
+    100% {
+        color: #f68559;
+    }
 }
